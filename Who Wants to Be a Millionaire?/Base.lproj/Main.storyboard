@@ -25,6 +25,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
+                                    <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TVP-JG-50k"/>
                                     <segue destination="2tu-4D-FdY" kind="show" identifier="NewGame" id="nGu-bK-evR"/>
                                 </connections>
                             </button>
@@ -73,6 +74,10 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="button1:" destination="2tu-4D-FdY" eventType="touchUpInside" id="ChG-rl-FgT"/>
+                                            <action selector="buttonA:" destination="2tu-4D-FdY" eventType="touchUpInside" id="FAC-Vz-BuX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URv-pb-3ha">
                                         <rect key="frame" x="0.0" y="58" width="374" height="50"/>
@@ -83,6 +88,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="button2:" destination="2tu-4D-FdY" eventType="touchUpInside" id="cXV-4q-Esy"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khE-dv-wJi">
                                         <rect key="frame" x="0.0" y="116" width="374" height="50"/>
@@ -93,6 +101,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="button3:" destination="2tu-4D-FdY" eventType="touchUpInside" id="5Zz-lv-o4k"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dze-sw-Q2V">
                                         <rect key="frame" x="0.0" y="174" width="374" height="50"/>
@@ -103,6 +114,9 @@
                                         <state key="normal" title="Button">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="button4:" destination="2tu-4D-FdY" eventType="touchUpInside" id="LAB-uW-WDt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -119,6 +133,13 @@
                         <viewLayoutGuide key="safeArea" id="KsN-Hj-1L1"/>
                     </view>
                     <navigationItem key="navigationItem" id="b8O-xP-p0s"/>
+                    <connections>
+                        <outlet property="questionLabel" destination="P7a-tH-zxJ" id="Q8j-qY-HtO"/>
+                        <outletCollection property="button" destination="9A1-aA-l80" collectionClass="NSMutableArray" id="gSg-HI-Cpn"/>
+                        <outletCollection property="button" destination="URv-pb-3ha" collectionClass="NSMutableArray" id="QKb-GY-mLH"/>
+                        <outletCollection property="button" destination="khE-dv-wJi" collectionClass="NSMutableArray" id="jfz-s6-a6G"/>
+                        <outletCollection property="button" destination="Dze-sw-Q2V" collectionClass="NSMutableArray" id="bTE-LE-PXC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSJ-b6-TBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
