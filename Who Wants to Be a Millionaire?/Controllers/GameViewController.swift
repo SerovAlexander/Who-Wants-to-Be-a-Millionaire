@@ -18,15 +18,50 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(button)
-        
+        self.navigationItem.setHidesBackButton(true, animated: false) 
         createQuestions()
     }
+    
+    @IBAction func button1(_ sender: Any) {
+        if answerNumber == 0 {
+            createQuestions()
+        } else {
+            pushVC()
+        }
+    }
+    
+    @IBAction func button2(_ sender: Any) {
+        if answerNumber == 1 {
+            createQuestions()
+        } else {
+            pushVC()
+        }
+    }
+    
+    @IBAction func button3(_ sender: Any) {
+        if answerNumber == 2 {
+            createQuestions()
+        } else {
+            pushVC()
+        }
+    }
+    
+    @IBAction func button4(_ sender: Any) {
+        if answerNumber == 3 {
+            createQuestions()
+        } else {
+            pushVC()
+        }
+    }
+    
+    
+    
+    // MARK: Functions
     
     func createQuestions() {
         
         if  gameQuestions.count > 0 {
-            qNumber = 0
+            qNumber = Int(arc4random_uniform(UInt32(gameQuestions.count)))
             questionLabel.text = gameQuestions[qNumber].questions
             answerNumber = gameQuestions[qNumber].numbberOfAnswer
             
@@ -37,40 +72,19 @@ class GameViewController: UIViewController {
             gameQuestions.remove(at: qNumber)
             
         } else {
-            NSLog("Done!")
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
+            vc.text = "Congradulations!!!"
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
-    @IBAction func button1(_ sender: Any) {
-        if answerNumber == 0 {
-            createQuestions()
-        } else {
-            NSLog("Wrong")
-        }
-    }
-    
-    @IBAction func button2(_ sender: Any) {
-        if answerNumber == 1 {
-                   createQuestions()
-               } else {
-                   NSLog("Wrong")
-               }
-    }
-    
-    @IBAction func button3(_ sender: Any) {
-        if answerNumber == 2 {
-                   createQuestions()
-               } else {
-                   NSLog("Wrong")
-               }
-    }
-    
-    @IBAction func button4(_ sender: Any) {
-        if answerNumber == 3 {
-                   createQuestions()
-               } else {
-                   NSLog("Wrong")
-               }
+    func pushVC(){
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
+        vc.text = "Loser"
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 }
+

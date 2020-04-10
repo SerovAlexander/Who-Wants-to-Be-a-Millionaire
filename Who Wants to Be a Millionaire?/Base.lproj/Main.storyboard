@@ -76,7 +76,6 @@
                                         </state>
                                         <connections>
                                             <action selector="button1:" destination="2tu-4D-FdY" eventType="touchUpInside" id="ChG-rl-FgT"/>
-                                            <action selector="buttonA:" destination="2tu-4D-FdY" eventType="touchUpInside" id="FAC-Vz-BuX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="URv-pb-3ha">
@@ -144,6 +143,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZSJ-b6-TBB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2781" y="115"/>
+        </scene>
+        <!--Final View Controller-->
+        <scene sceneID="voX-kF-49M">
+            <objects>
+                <viewController storyboardIdentifier="FinalViewController" id="vZJ-AD-REi" customClass="FinalViewController" customModule="Who_Wants_to_Be_a_Millionaire_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="muZ-Ll-7Iy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nua-Fr-1h2">
+                                <rect key="frame" x="153.5" y="420.5" width="107.5" height="55"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ResultLabel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfZ-To-z8V">
+                                <rect key="frame" x="10" y="535" width="394" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41951072220000002" green="0.20031276349999999" blue="0.40785923600000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GfZ-To-z8V" firstAttribute="top" secondItem="nua-Fr-1h2" secondAttribute="bottom" constant="59.5" id="0bM-Xm-DD8"/>
+                            <constraint firstItem="GfZ-To-z8V" firstAttribute="leading" secondItem="Op7-UA-Vgy" secondAttribute="leading" constant="10" id="Cot-7n-OK0"/>
+                            <constraint firstItem="nua-Fr-1h2" firstAttribute="centerX" secondItem="muZ-Ll-7Iy" secondAttribute="centerX" id="LlC-EO-Q5E"/>
+                            <constraint firstItem="Op7-UA-Vgy" firstAttribute="trailing" secondItem="GfZ-To-z8V" secondAttribute="trailing" constant="10" id="Yi5-95-yVV"/>
+                            <constraint firstItem="nua-Fr-1h2" firstAttribute="centerY" secondItem="muZ-Ll-7Iy" secondAttribute="centerY" id="dnF-bf-9bb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Op7-UA-Vgy"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="GfZ-To-z8V" id="orQ-rb-iSg"/>
+                        <outlet property="textLabel" destination="nua-Fr-1h2" id="wDh-XM-5Zd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="78X-s5-S3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3552" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hBb-mJ-BGj">

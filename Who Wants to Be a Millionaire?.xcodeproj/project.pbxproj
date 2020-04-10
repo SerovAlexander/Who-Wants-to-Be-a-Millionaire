@@ -15,6 +15,7 @@
 		0444D3DE243F6E77006CF3E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0444D3DC243F6E77006CF3E0 /* LaunchScreen.storyboard */; };
 		0444D3E7243F8AE7006CF3E0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3E6243F8AE7006CF3E0 /* GameViewController.swift */; };
 		0444D3ED243F8CBD006CF3E0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3EC243F8CBD006CF3E0 /* Question.swift */; };
+		0444D3F2244062F9006CF3E0 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3F1244062F9006CF3E0 /* FinalViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0444D3DF243F6E77006CF3E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0444D3E6243F8AE7006CF3E0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		0444D3EC243F8CBD006CF3E0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		0444D3F1244062F9006CF3E0 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				0444D3D5243F6E74006CF3E0 /* ViewController.swift */,
 				0444D3E6243F8AE7006CF3E0 /* GameViewController.swift */,
+				0444D3F1244062F9006CF3E0 /* FinalViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0444D3E7243F8AE7006CF3E0 /* GameViewController.swift in Sources */,
+				0444D3F2244062F9006CF3E0 /* FinalViewController.swift in Sources */,
 				0444D3D6243F6E74006CF3E0 /* ViewController.swift in Sources */,
 				0444D3D2243F6E74006CF3E0 /* AppDelegate.swift in Sources */,
 				0444D3ED243F8CBD006CF3E0 /* Question.swift in Sources */,
