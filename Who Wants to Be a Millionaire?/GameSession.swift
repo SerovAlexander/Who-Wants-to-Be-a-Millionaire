@@ -14,18 +14,14 @@ class GameSession {
     var rightAnswerCount = 0
     var gamePoint = Int()
     var pointForRightAnswer = 1000
-    
+    func onAnswerGive(index: Int) {
+        
+    }
 }
 
 class Game {
-    
     var gameSession = GameSession()
     static let Shared = Game()
     private init() { }
-    
 }
 
-extension GameSession: GameDelegate {
-    func finishGame(rightAnswer: Int, Points: Int) {
-    }
-}
