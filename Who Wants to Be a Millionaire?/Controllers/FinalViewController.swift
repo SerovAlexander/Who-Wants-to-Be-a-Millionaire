@@ -12,6 +12,7 @@ class FinalViewController: UIViewController {
 
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var ResultButton: UIButton!
     
     var text: String = ""
     var resultText = ""
@@ -24,5 +25,7 @@ class FinalViewController: UIViewController {
 
     }
 
-
+    @IBAction func newGame(_ sender: Any) {
+        
+    }
 }

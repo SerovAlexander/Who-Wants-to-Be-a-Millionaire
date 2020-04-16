@@ -41,6 +41,7 @@ class GameViewController: UIViewController {
             createQuestions()
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
+            Game.Shared.saveResult(result: gamePoint)
             pushVC()
         }
     }
@@ -52,6 +53,7 @@ class GameViewController: UIViewController {
             createQuestions()
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
+            Game.Shared.saveResult(result: gamePoint)
             pushVC()
         }
     }
@@ -63,6 +65,7 @@ class GameViewController: UIViewController {
             createQuestions()
         } else {
            self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
+            Game.Shared.saveResult(result: gamePoint)
             pushVC()
         }
     }
@@ -74,6 +77,7 @@ class GameViewController: UIViewController {
             createQuestions()
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
+            Game.Shared.saveResult(result: gamePoint)
             pushVC()
         }
     }
@@ -98,6 +102,7 @@ class GameViewController: UIViewController {
             let vc = storyboard.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
             vc.text = "Congradulations!!!"
             vc.resultText = "Вы заработали - \(gamePoint)"
+            Game.Shared.saveResult(result: gamePoint)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }

@@ -17,6 +17,8 @@
 		0444D3ED243F8CBD006CF3E0 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3EC243F8CBD006CF3E0 /* Question.swift */; };
 		0444D3F2244062F9006CF3E0 /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3F1244062F9006CF3E0 /* FinalViewController.swift */; };
 		0444D3F42440A7B9006CF3E0 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3F32440A7B9006CF3E0 /* GameSession.swift */; };
+		04EC1DE224476E60009C5854 /* ResultsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DE124476E60009C5854 /* ResultsTableVC.swift */; };
+		04EC1DE524489385009C5854 /* GameResultCareTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DE424489385009C5854 /* GameResultCareTaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		0444D3EC243F8CBD006CF3E0 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		0444D3F1244062F9006CF3E0 /* FinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		0444D3F32440A7B9006CF3E0 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
+		04EC1DE124476E60009C5854 /* ResultsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableVC.swift; sourceTree = "<group>"; };
+		04EC1DE424489385009C5854 /* GameResultCareTaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultCareTaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,7 @@
 		0444D3D0243F6E74006CF3E0 /* Who Wants to Be a Millionaire? */ = {
 			isa = PBXGroup;
 			children = (
+				04EC1DE32448935C009C5854 /* Pattern memento */,
 				0444D3F32440A7B9006CF3E0 /* GameSession.swift */,
 				0444D3EB243F8C8D006CF3E0 /* Models */,
 				0444D3E5243F8A7E006CF3E0 /* Controllers */,
@@ -83,6 +88,7 @@
 				0444D3D5243F6E74006CF3E0 /* ViewController.swift */,
 				0444D3E6243F8AE7006CF3E0 /* GameViewController.swift */,
 				0444D3F1244062F9006CF3E0 /* FinalViewController.swift */,
+				04EC1DE124476E60009C5854 /* ResultsTableVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -93,6 +99,14 @@
 				0444D3EC243F8CBD006CF3E0 /* Question.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		04EC1DE32448935C009C5854 /* Pattern memento */ = {
+			isa = PBXGroup;
+			children = (
+				04EC1DE424489385009C5854 /* GameResultCareTaker.swift */,
+			);
+			path = "Pattern memento";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +182,13 @@
 			files = (
 				0444D3E7243F8AE7006CF3E0 /* GameViewController.swift in Sources */,
 				0444D3F2244062F9006CF3E0 /* FinalViewController.swift in Sources */,
+				04EC1DE224476E60009C5854 /* ResultsTableVC.swift in Sources */,
 				0444D3D6243F6E74006CF3E0 /* ViewController.swift in Sources */,
 				0444D3D2243F6E74006CF3E0 /* AppDelegate.swift in Sources */,
 				0444D3F42440A7B9006CF3E0 /* GameSession.swift in Sources */,
 				0444D3ED243F8CBD006CF3E0 /* Question.swift in Sources */,
 				0444D3D4243F6E74006CF3E0 /* SceneDelegate.swift in Sources */,
+				04EC1DE524489385009C5854 /* GameResultCareTaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
