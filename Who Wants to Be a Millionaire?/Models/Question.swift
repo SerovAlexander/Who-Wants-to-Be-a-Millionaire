@@ -14,7 +14,7 @@ struct Questions {
     let numbberOfAnswer: Int
 }
 
-var gameQuestions: [Questions] = [questions1, questions2, questions3, questions4, questions5, questions7, questions8, questions9, questions10]
+let gameQuestions: [Questions] = [questions1, questions2, questions3, questions4, questions5, questions7, questions8, questions9, questions10]
 
 // MARK: Вопросы
 var questions1 = Questions(questions: "Какое растение существует на самом деле?",
@@ -36,10 +36,6 @@ var questions4 = Questions(questions: "Что проводит боксер, н�
 var questions5 = Questions(questions: "Кого нет среди смешариков?",
                            answers: ["Барана", "Свиньи", "Коня", "Лося"],
                            numbberOfAnswer: 2)
-
-//var questions6 = Questions(questions: "Кого нет среди смешариков?",
-//                           answers: ["Барана", "Свиньи", "Коня", "Лося"],
-//                           numbberOfAnswer: 2)
 
 var questions7 = Questions(questions: "Как называется ближайшая к Земле звезда?",
                            answers: ["Проксиома Центавра", "Солнце", "Полярная", "Сириус"],

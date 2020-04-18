@@ -14,7 +14,11 @@ protocol GameDelegate: class {
 
 class GameViewController: UIViewController {
     
+    var numberOfQuestionStrategy: SequenceOfQuestions = RandomQuestions()
+    
     weak var gameDelegate: GameDelegate?
+    
+    var provider = Game.Shared.questionsProvider
     
     var qNumber = Int()
     var rightAnswerNumber = Int()
@@ -33,7 +37,7 @@ class GameViewController: UIViewController {
         createQuestions()
     }
     
-// Проверка ответа игрока
+    // Проверка ответа игрока
     @IBAction func button1(_ sender: Any) {
         if rightAnswerNumber == 0 {
             rightAnswerCount += 1
@@ -64,7 +68,7 @@ class GameViewController: UIViewController {
             gamePoint += point
             createQuestions()
         } else {
-           self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
+            self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
             Game.Shared.saveResult(result: gamePoint)
             pushVC()
         }
@@ -81,22 +85,21 @@ class GameViewController: UIViewController {
             pushVC()
         }
     }
-
-// MARK: Functions
-// Функция создания вопроса
+    
+    // MARK: Functions
+    
+    // Функция создания вопроса
     func createQuestions() {
         
-        if  gameQuestions.count > 0 {
-            qNumber = Int(arc4random_uniform(UInt32(gameQuestions.count)))
-            questionLabel.text = gameQuestions[qNumber].questions
-            rightAnswerNumber = gameQuestions[qNumber].numbberOfAnswer
-            
+        if provider.getRemainQuestionsCount() > 0 {
+            qNumber = numberOfQuestionStrategy.getQuestionsNumber(array: provider.questions )
+            questionLabel.text = provider.getQuestionsText(number: qNumber)
+            rightAnswerNumber = provider.getRightAnswerNumber(number: qNumber)
             for i in 0..<button.count {
-                button[i].setTitle(gameQuestions[qNumber].answers[i], for: UIControl.State.normal)
+                button[i].setTitle(provider.getAnswerText(index: i, number: qNumber), for: UIControl.State.normal)
             }
-            
-            gameQuestions.remove(at: qNumber)
-            
+            provider.questions.remove(at: qNumber)
+
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
@@ -106,7 +109,7 @@ class GameViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-// Функция вызова FinalViewController
+    // Функция вызова FinalViewController
     func pushVC(){
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController

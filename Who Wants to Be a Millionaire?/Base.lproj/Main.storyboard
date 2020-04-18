@@ -7,6 +7,62 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Settings TableVC-->
+        <scene sceneID="KjL-tc-uTb">
+            <objects>
+                <tableViewController id="OJJ-NX-Azf" customClass="SettingsTableVC" customModule="Who_Wants_to_Be_a_Millionaire_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cng-eC-rB6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="TTE-mA-c9h">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TYV-yR-etC">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TYV-yR-etC" id="9kk-dQ-T00">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1KY-sm-uCH">
+                                                    <rect key="frame" x="345" y="7" width="49" height="31"/>
+                                                    <connections>
+                                                        <action selector="changeDif:" destination="OJJ-NX-Azf" eventType="valueChanged" id="JwC-r4-SjD"/>
+                                                    </connections>
+                                                </switch>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопросы не попорядку" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Arl-5N-fHn">
+                                                    <rect key="frame" x="10" y="11.5" width="185" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1KY-sm-uCH" firstAttribute="centerY" secondItem="9kk-dQ-T00" secondAttribute="centerY" id="C8j-ty-aTd"/>
+                                                <constraint firstItem="Arl-5N-fHn" firstAttribute="centerY" secondItem="9kk-dQ-T00" secondAttribute="centerY" id="S9X-T9-MII"/>
+                                                <constraint firstAttribute="trailing" secondItem="1KY-sm-uCH" secondAttribute="trailing" constant="22" id="hjJ-cy-Od3"/>
+                                                <constraint firstItem="Arl-5N-fHn" firstAttribute="leading" secondItem="9kk-dQ-T00" secondAttribute="leading" constant="10" id="hub-dr-ZM1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="OJJ-NX-Azf" id="7Nz-HD-nA1"/>
+                            <outlet property="delegate" destination="OJJ-NX-Azf" id="3Ld-63-22E"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="PEe-v1-xDs"/>
+                    <connections>
+                        <outlet property="difficultySwitch" destination="1KY-sm-uCH" id="Bao-iX-zA4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M4Z-ct-fiV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028" y="-654"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -29,15 +85,28 @@
                                     <segue destination="2tu-4D-FdY" kind="show" identifier="NewGame" id="nGu-bK-evR"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dH6-EA-yyg">
+                                <rect key="frame" x="145" y="601" width="125" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Настройки">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="OJJ-NX-Azf" kind="show" identifier="toSetting" id="gTG-ub-Qf1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.36879548429999998" green="0.22891277069999999" blue="0.38824868200000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="dH6-EA-yyg" firstAttribute="top" secondItem="ke0-rt-9zg" secondAttribute="bottom" constant="8" id="6o0-xV-TNr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ke0-rt-9zg" secondAttribute="trailing" constant="100" id="AZt-CL-tdR"/>
                             <constraint firstItem="ke0-rt-9zg" firstAttribute="top" secondItem="kIQ-wf-Ggu" secondAttribute="bottom" constant="20" id="BwY-Ra-3jh"/>
                             <constraint firstItem="kIQ-wf-Ggu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="162" id="I4a-rw-kwd"/>
                             <constraint firstItem="ke0-rt-9zg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="S9w-Pk-k2k"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kIQ-wf-Ggu" secondAttribute="trailing" constant="26" id="d7M-yh-5tw"/>
                             <constraint firstItem="kIQ-wf-Ggu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="kpS-d0-Skk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dH6-EA-yyg" secondAttribute="trailing" constant="144" id="mTI-Oi-edq"/>
+                            <constraint firstItem="dH6-EA-yyg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="145" id="sRP-9d-FG3"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kIQ-wf-Ggu" secondAttribute="bottom" constant="331" id="ueT-F5-HWR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -53,17 +122,17 @@
             <objects>
                 <viewController storyboardIdentifier="GameViewController" id="2tu-4D-FdY" customClass="GameViewController" customModule="Who_Wants_to_Be_a_Millionaire_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TRF-dg-5HI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7a-tH-zxJ">
-                                <rect key="frame" x="20" y="143" width="374" height="31.5"/>
+                                <rect key="frame" x="20" y="231" width="374" height="31.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PcG-J3-bD3">
-                                <rect key="frame" x="20" y="374.5" width="374" height="224"/>
+                                <rect key="frame" x="20" y="462.5" width="374" height="224"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9A1-aA-l80">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -255,7 +324,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7Bp-vM-enj"/>
+        <segue reference="nGu-bK-evR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="322_c144e2880b" width="564" height="251"/>

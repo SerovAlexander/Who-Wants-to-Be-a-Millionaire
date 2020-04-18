@@ -19,6 +19,12 @@
 		0444D3F42440A7B9006CF3E0 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3F32440A7B9006CF3E0 /* GameSession.swift */; };
 		04EC1DE224476E60009C5854 /* ResultsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DE124476E60009C5854 /* ResultsTableVC.swift */; };
 		04EC1DE524489385009C5854 /* GameResultCareTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DE424489385009C5854 /* GameResultCareTaker.swift */; };
+		04EC1DED2449DB39009C5854 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DEC2449DB39009C5854 /* Difficulty.swift */; };
+		04EC1DEF244AF9EB009C5854 /* SettingsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DEE244AF9EB009C5854 /* SettingsTableVC.swift */; };
+		04EC1DF1244B132C009C5854 /* SequenceOfQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF0244B132C009C5854 /* SequenceOfQuestions.swift */; };
+		04EC1DF3244B13C9009C5854 /* RandomQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF2244B13C9009C5854 /* RandomQuestions.swift */; };
+		04EC1DF5244B2109009C5854 /* SeriasQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF4244B2109009C5854 /* SeriasQuestions.swift */; };
+		04EC1DF7244B6F58009C5854 /* QuestionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF6244B6F58009C5854 /* QuestionsProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		0444D3F32440A7B9006CF3E0 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		04EC1DE124476E60009C5854 /* ResultsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableVC.swift; sourceTree = "<group>"; };
 		04EC1DE424489385009C5854 /* GameResultCareTaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultCareTaker.swift; sourceTree = "<group>"; };
+		04EC1DEC2449DB39009C5854 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		04EC1DEE244AF9EB009C5854 /* SettingsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableVC.swift; sourceTree = "<group>"; };
+		04EC1DF0244B132C009C5854 /* SequenceOfQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOfQuestions.swift; sourceTree = "<group>"; };
+		04EC1DF2244B13C9009C5854 /* RandomQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestions.swift; sourceTree = "<group>"; };
+		04EC1DF4244B2109009C5854 /* SeriasQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriasQuestions.swift; sourceTree = "<group>"; };
+		04EC1DF6244B6F58009C5854 /* QuestionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +80,9 @@
 		0444D3D0243F6E74006CF3E0 /* Who Wants to Be a Millionaire? */ = {
 			isa = PBXGroup;
 			children = (
-				04EC1DE32448935C009C5854 /* Pattern memento */,
+				04EC1DF6244B6F58009C5854 /* QuestionsProvider.swift */,
+				04EC1DEC2449DB39009C5854 /* Difficulty.swift */,
+				04EC1DEA2449DAEC009C5854 /* Pattern */,
 				0444D3F32440A7B9006CF3E0 /* GameSession.swift */,
 				0444D3EB243F8C8D006CF3E0 /* Models */,
 				0444D3E5243F8A7E006CF3E0 /* Controllers */,
@@ -89,6 +103,7 @@
 				0444D3E6243F8AE7006CF3E0 /* GameViewController.swift */,
 				0444D3F1244062F9006CF3E0 /* FinalViewController.swift */,
 				04EC1DE124476E60009C5854 /* ResultsTableVC.swift */,
+				04EC1DEE244AF9EB009C5854 /* SettingsTableVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -101,12 +116,31 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		04EC1DE32448935C009C5854 /* Pattern memento */ = {
+		04EC1DE32448935C009C5854 /* Memento */ = {
 			isa = PBXGroup;
 			children = (
 				04EC1DE424489385009C5854 /* GameResultCareTaker.swift */,
 			);
-			path = "Pattern memento";
+			path = Memento;
+			sourceTree = "<group>";
+		};
+		04EC1DEA2449DAEC009C5854 /* Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				04EC1DEB2449DB20009C5854 /* Strategy */,
+				04EC1DE32448935C009C5854 /* Memento */,
+			);
+			path = Pattern;
+			sourceTree = "<group>";
+		};
+		04EC1DEB2449DB20009C5854 /* Strategy */ = {
+			isa = PBXGroup;
+			children = (
+				04EC1DF0244B132C009C5854 /* SequenceOfQuestions.swift */,
+				04EC1DF2244B13C9009C5854 /* RandomQuestions.swift */,
+				04EC1DF4244B2109009C5854 /* SeriasQuestions.swift */,
+			);
+			path = Strategy;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,14 +215,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				0444D3E7243F8AE7006CF3E0 /* GameViewController.swift in Sources */,
+				04EC1DF7244B6F58009C5854 /* QuestionsProvider.swift in Sources */,
 				0444D3F2244062F9006CF3E0 /* FinalViewController.swift in Sources */,
+				04EC1DF1244B132C009C5854 /* SequenceOfQuestions.swift in Sources */,
+				04EC1DED2449DB39009C5854 /* Difficulty.swift in Sources */,
 				04EC1DE224476E60009C5854 /* ResultsTableVC.swift in Sources */,
 				0444D3D6243F6E74006CF3E0 /* ViewController.swift in Sources */,
+				04EC1DEF244AF9EB009C5854 /* SettingsTableVC.swift in Sources */,
 				0444D3D2243F6E74006CF3E0 /* AppDelegate.swift in Sources */,
 				0444D3F42440A7B9006CF3E0 /* GameSession.swift in Sources */,
 				0444D3ED243F8CBD006CF3E0 /* Question.swift in Sources */,
+				04EC1DF5244B2109009C5854 /* SeriasQuestions.swift in Sources */,
 				0444D3D4243F6E74006CF3E0 /* SceneDelegate.swift in Sources */,
 				04EC1DE524489385009C5854 /* GameResultCareTaker.swift in Sources */,
+				04EC1DF3244B13C9009C5854 /* RandomQuestions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

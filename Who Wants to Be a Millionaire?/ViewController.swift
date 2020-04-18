@@ -12,13 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+      
     }
 
 
     @IBAction func newGame(_ sender: Any) {
-        let session = GameSession()
-        Game.Shared.gameSession = session
+        Game.Shared.gameSession = GameSession()
+        Game.Shared.questionsProvider  = QuestionsProvider()
     }
     
     
@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         if (segue.identifier == "NewGame") {
             guard let vc = segue.destination as? GameViewController else { return }
             vc.gameDelegate = self
+            vc.numberOfQuestionStrategy = Game.Shared.randomQ
+        } else if (segue.identifier == "toSetting" ) {
+            guard let vc = segue.destination as? SettingsTableVC else { return }
+            vc.settingsDelegate = self
         }
     }
 }
@@ -38,3 +42,18 @@ extension ViewController: GameDelegate {
         session.gamePoint = Points
     }
 }
+
+extension ViewController: SettingsDelegate {
+    func setDifficult(sequence: Bool) {
+        if sequence == true {
+            Game.Shared.randomQ = RandomQuestions()
+        } else {
+            Game.Shared.randomQ = SeriasQuestions()
+        }
+    }
+
+}
+    
+    
+
+
