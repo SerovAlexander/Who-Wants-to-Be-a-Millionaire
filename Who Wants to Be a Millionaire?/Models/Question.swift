@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Questions {
+struct Questions: {
     let questions: String
     let answers: [String]
     let numbberOfAnswer: Int
