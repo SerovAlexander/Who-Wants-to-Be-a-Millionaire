@@ -26,7 +26,6 @@ class QuestionsCareTaker {
         } catch  {
             print(error)
         }
-        
     }
     
     func getQuestions()  -> [Question] {
@@ -39,6 +38,4 @@ class QuestionsCareTaker {
                return []
            }
        }
-    
-    
 }

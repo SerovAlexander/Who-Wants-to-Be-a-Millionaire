@@ -35,12 +35,12 @@ class QuestionsProvider {
     }
     
     func getQuestions() -> [Question] {
-        var q = gameQuestions.questionsCareTaker.getQuestions()
-        if q.isEmpty {
-            q = gameQuestions.gameQuestions
-            return q
+        var question = gameQuestions.questionsCareTaker.getQuestions()
+        if question.isEmpty {
+            question = gameQuestions.gameQuestions
+            return question
         } else {
-            return q
+            return question
         }
     }
   
