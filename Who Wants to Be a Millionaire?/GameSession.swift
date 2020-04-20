@@ -10,7 +10,7 @@ import Foundation
 
 class GameSession {
     
-    var answersCount = gameQuestions.count
+//    var answersCount = 0
     var rightAnswerCount = 0
     var gamePoint = Int()
     var pointForRightAnswer = 1000

@@ -92,6 +92,7 @@ class GameViewController: UIViewController {
     func createQuestions() {
         
         if provider.getRemainQuestionsCount() > 0 {
+            print(provider.getRemainQuestionsCount())
             qNumber = numberOfQuestionStrategy.getQuestionsNumber(array: provider.questions )
             questionLabel.text = provider.getQuestionsText(number: qNumber)
             rightAnswerNumber = provider.getRightAnswerNumber(number: qNumber)

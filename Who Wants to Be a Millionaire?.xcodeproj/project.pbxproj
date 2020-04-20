@@ -19,14 +19,13 @@
 		0444D3F42440A7B9006CF3E0 /* GameSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3F32440A7B9006CF3E0 /* GameSession.swift */; };
 		04EC1DE224476E60009C5854 /* ResultsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DE124476E60009C5854 /* ResultsTableVC.swift */; };
 		04EC1DE524489385009C5854 /* GameResultCareTaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DE424489385009C5854 /* GameResultCareTaker.swift */; };
-		04EC1DED2449DB39009C5854 /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DEC2449DB39009C5854 /* Difficulty.swift */; };
 		04EC1DEF244AF9EB009C5854 /* SettingsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DEE244AF9EB009C5854 /* SettingsTableVC.swift */; };
 		04EC1DF1244B132C009C5854 /* SequenceOfQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF0244B132C009C5854 /* SequenceOfQuestions.swift */; };
 		04EC1DF3244B13C9009C5854 /* RandomQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF2244B13C9009C5854 /* RandomQuestions.swift */; };
 		04EC1DF5244B2109009C5854 /* SeriasQuestions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF4244B2109009C5854 /* SeriasQuestions.swift */; };
 		04EC1DF7244B6F58009C5854 /* QuestionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF6244B6F58009C5854 /* QuestionsProvider.swift */; };
 		04EC1DF9244C9418009C5854 /* AddQuestionsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DF8244C9418009C5854 /* AddQuestionsVC.swift */; };
-		04EC1DFB244CA115009C5854 /* UIrextViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DFA244CA115009C5854 /* UIrextViewBorder.swift */; };
+		04EC1DFB244CA115009C5854 /* UITextViewBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DFA244CA115009C5854 /* UITextViewBorder.swift */; };
 		04EC1DFD244CB39B009C5854 /* QuestionsCareTraker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04EC1DFC244CB39B009C5854 /* QuestionsCareTraker.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,14 +44,13 @@
 		0444D3F32440A7B9006CF3E0 /* GameSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSession.swift; sourceTree = "<group>"; };
 		04EC1DE124476E60009C5854 /* ResultsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableVC.swift; sourceTree = "<group>"; };
 		04EC1DE424489385009C5854 /* GameResultCareTaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultCareTaker.swift; sourceTree = "<group>"; };
-		04EC1DEC2449DB39009C5854 /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		04EC1DEE244AF9EB009C5854 /* SettingsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableVC.swift; sourceTree = "<group>"; };
 		04EC1DF0244B132C009C5854 /* SequenceOfQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceOfQuestions.swift; sourceTree = "<group>"; };
 		04EC1DF2244B13C9009C5854 /* RandomQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomQuestions.swift; sourceTree = "<group>"; };
 		04EC1DF4244B2109009C5854 /* SeriasQuestions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriasQuestions.swift; sourceTree = "<group>"; };
 		04EC1DF6244B6F58009C5854 /* QuestionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsProvider.swift; sourceTree = "<group>"; };
 		04EC1DF8244C9418009C5854 /* AddQuestionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionsVC.swift; sourceTree = "<group>"; };
-		04EC1DFA244CA115009C5854 /* UIrextViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIrextViewBorder.swift; sourceTree = "<group>"; };
+		04EC1DFA244CA115009C5854 /* UITextViewBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextViewBorder.swift; sourceTree = "<group>"; };
 		04EC1DFC244CB39B009C5854 /* QuestionsCareTraker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCareTraker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,9 +84,8 @@
 		0444D3D0243F6E74006CF3E0 /* Who Wants to Be a Millionaire? */ = {
 			isa = PBXGroup;
 			children = (
-				04EC1DFA244CA115009C5854 /* UIrextViewBorder.swift */,
+				04EC1DFA244CA115009C5854 /* UITextViewBorder.swift */,
 				04EC1DF6244B6F58009C5854 /* QuestionsProvider.swift */,
-				04EC1DEC2449DB39009C5854 /* Difficulty.swift */,
 				04EC1DEA2449DAEC009C5854 /* Pattern */,
 				0444D3F32440A7B9006CF3E0 /* GameSession.swift */,
 				0444D3EB243F8C8D006CF3E0 /* Models */,
@@ -227,8 +224,7 @@
 				04EC1DF7244B6F58009C5854 /* QuestionsProvider.swift in Sources */,
 				0444D3F2244062F9006CF3E0 /* FinalViewController.swift in Sources */,
 				04EC1DF1244B132C009C5854 /* SequenceOfQuestions.swift in Sources */,
-				04EC1DFB244CA115009C5854 /* UIrextViewBorder.swift in Sources */,
-				04EC1DED2449DB39009C5854 /* Difficulty.swift in Sources */,
+				04EC1DFB244CA115009C5854 /* UITextViewBorder.swift in Sources */,
 				04EC1DE224476E60009C5854 /* ResultsTableVC.swift in Sources */,
 				0444D3D6243F6E74006CF3E0 /* ViewController.swift in Sources */,
 				04EC1DEF244AF9EB009C5854 /* SettingsTableVC.swift in Sources */,

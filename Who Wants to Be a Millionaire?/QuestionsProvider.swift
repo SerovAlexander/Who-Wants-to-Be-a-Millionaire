@@ -12,7 +12,12 @@ import Foundation
 
 class QuestionsProvider {
     
-    var questions: [Questions] = gameQuestions
+    
+    
+    private var gameQuestions = GameQuestions()
+    
+    lazy var questions: [Question] = getQuestions()
+    
     
     func getRemainQuestionsCount() -> Int {
         return questions.count
@@ -27,6 +32,16 @@ class QuestionsProvider {
     }
     func getAnswerText(index: Int, number: Int) -> String {
         return questions[number].answers[index]
+    }
+    
+    func getQuestions() -> [Question] {
+        var q = gameQuestions.questionsCareTaker.getQuestions()
+        if q.isEmpty {
+            q = gameQuestions.gameQuestions
+            return q
+        } else {
+            return q
+        }
     }
   
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 final class SeriasQuestions: SequenceOfQuestions {
-    func getQuestionsNumber(array: [Questions]) -> Int {
+    func getQuestionsNumber(array: [Question]) -> Int {
         return 0
     }
 }

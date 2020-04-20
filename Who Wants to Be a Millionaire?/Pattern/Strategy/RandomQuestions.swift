@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 final class RandomQuestions: SequenceOfQuestions {
-    func getQuestionsNumber(array: [Questions]) -> Int {
+    func getQuestionsNumber(array: [Question]) -> Int {
         let qNumber = Int(arc4random_uniform(UInt32(array.count)))
         return qNumber
     }

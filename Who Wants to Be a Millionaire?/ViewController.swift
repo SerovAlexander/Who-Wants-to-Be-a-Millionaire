@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private var gameQuestions = GameQuestions()
 
     override func viewDidLoad() {
         super.viewDidLoad()

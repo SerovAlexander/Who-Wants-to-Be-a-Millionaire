@@ -9,6 +9,9 @@
 import UIKit
 
 class AddQuestionsVC: UIViewController {
+    
+    var game = GameQuestions()
+    
 
     @IBOutlet weak var answer1: UITextView!
     @IBOutlet weak var answer2: UITextView!
@@ -17,6 +20,7 @@ class AddQuestionsVC: UIViewController {
     @IBOutlet weak var numberRightQuestions: UITextView!
     @IBOutlet weak var textView: UITextView!
     
+    private var question = Question(questions: "", answers: [], numbberOfAnswer: 0)
     override func viewDidLoad() {
         
         boarder(textView: textView)
@@ -30,10 +34,53 @@ class AddQuestionsVC: UIViewController {
     }
     
     @IBAction func saveQuestions(_ sender: Any) {
+        if textView.text != "Введите вопрос" {
+            question.questions = textView.text
+        } else {
+            alert(title: "Введите вопрос!")
+        }
+        if answer1.text != "Ответ №1" {
+            question.answers.append(answer1.text)
+        } else {
+            alert(title: "Введите ответ №1")
+        }
+        if answer2.text != "Ответ №2" {
+            question.answers.append(answer2.text)
+        } else {
+            alert(title: "Введите ответ №2")
+        }
+        if answer3.text != "Ответ №3" {
+            question.answers.append(answer3.text)
+        } else {
+            alert(title: "Введите ответ №3")
+        }
+        if answer4.text != "Ответ №4" {
+            question.answers.append(answer4.text)
+        } else {
+            alert(title: "Введите ответ №4")
+        }
+        if numberRightQuestions.text != "Номер правильного ответа" {
+            question.numbberOfAnswer = (Int(numberRightQuestions.text) ?? 0) - 1
+            print(question.numbberOfAnswer)
+        } else {
+            alert(title: "Введите номер правильного ответа ")
+        }
+        
+        game.gameQuestions.append(question)
+        game.questionsCareTaker.saveQuestions(questions: game.gameQuestions)
+        
+        
         
     }
-}
+    
+    func alert(title: String) {
+        let alertController = UIAlertController(title: title, message: "Ошибка", preferredStyle: .alert)
+        let OKAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(OKAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
 
+}
 
 
 

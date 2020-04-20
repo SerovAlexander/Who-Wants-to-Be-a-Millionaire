@@ -10,6 +10,6 @@ import Foundation
 import UIKit
 
 protocol SequenceOfQuestions {
-    func getQuestionsNumber (array: [Questions]) -> Int
+    func getQuestionsNumber (array: [Question]) -> Int
 }
 

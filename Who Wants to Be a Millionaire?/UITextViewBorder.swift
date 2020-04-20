@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-// Функция для создания границы UITextView
+
 func boarder(textView: UITextView) {
          textView.layer.cornerRadius = 5
          textView.layer.borderColor = UIColor.gray.withAlphaComponent(0.5).cgColor
