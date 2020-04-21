@@ -12,8 +12,6 @@ import Foundation
 
 class QuestionsProvider {
     
-    
-    
     private var gameQuestions = GameQuestions()
     
     lazy var questions: [Question] = getQuestions()
