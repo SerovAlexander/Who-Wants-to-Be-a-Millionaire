@@ -11,7 +11,7 @@ import UIKit
 
 final class RandomQuestions: SequenceOfQuestions {
     func getQuestionsNumber(array: [Question]) -> Int {
-        let qNumber = Int(arc4random_uniform(UInt32(array.count)))
+        let qNumber = Int.random(in: 0...array.count-1)
         return qNumber
     }
 }

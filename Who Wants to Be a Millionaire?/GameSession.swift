@@ -22,7 +22,7 @@ class Game {
     var gameSession = GameSession()
     var questionsProvider = QuestionsProvider()
     var randomQ: SequenceOfQuestions = RandomQuestions()
-    static let Shared = Game()
+    static let shared = Game()
     private init() {
         self.results = gameResultCareTaker.getResult()
         
