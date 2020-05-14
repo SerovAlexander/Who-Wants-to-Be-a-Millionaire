@@ -18,7 +18,7 @@ class GameViewController: UIViewController {
     
     weak var gameDelegate: GameDelegate?
     
-    var provider = Game.Shared.questionsProvider
+    var provider = Game.shared.questionsProvider
     
     var qNumber = Int()
     var rightAnswerNumber = Int()
@@ -29,7 +29,14 @@ class GameViewController: UIViewController {
     
     
     @IBOutlet weak var questionLabel: UILabel!
-    @IBOutlet var button: [UIButton]!
+    @IBOutlet var button: [UIButton]! {
+        didSet {
+            for button in button {
+                button.layer.cornerRadius = 25
+                button.layer.masksToBounds = true
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +52,7 @@ class GameViewController: UIViewController {
             createQuestions()
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
-            Game.Shared.saveResult(result: gamePoint)
+            Game.shared.saveResult(result: gamePoint)
             pushVC()
         }
     }
@@ -57,7 +64,7 @@ class GameViewController: UIViewController {
             createQuestions()
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
-            Game.Shared.saveResult(result: gamePoint)
+            Game.shared.saveResult(result: gamePoint)
             pushVC()
         }
     }
@@ -69,7 +76,7 @@ class GameViewController: UIViewController {
             createQuestions()
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
-            Game.Shared.saveResult(result: gamePoint)
+            Game.shared.saveResult(result: gamePoint)
             pushVC()
         }
     }
@@ -81,7 +88,7 @@ class GameViewController: UIViewController {
             createQuestions()
         } else {
             self.gameDelegate?.finishGame(rightAnswer: rightAnswerCount, Points: gamePoint)
-            Game.Shared.saveResult(result: gamePoint)
+            Game.shared.saveResult(result: gamePoint)
             pushVC()
         }
     }
@@ -106,7 +113,7 @@ class GameViewController: UIViewController {
             let vc = storyboard.instantiateViewController(withIdentifier: "FinalViewController") as! FinalViewController
             vc.text = "Congradulations!!!"
             vc.resultText = "Вы заработали - \(gamePoint)"
-            Game.Shared.saveResult(result: gamePoint)
+            Game.shared.saveResult(result: gamePoint)
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
